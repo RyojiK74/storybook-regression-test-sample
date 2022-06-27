@@ -1,0 +1,4 @@
+// stylesheets are prettiered by stylelint
+./**/*.css
+./**/*.scss
+./**/*.sass

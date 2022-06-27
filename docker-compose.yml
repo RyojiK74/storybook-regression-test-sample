@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3002:3000'
+    volumes:
+      - ./:/app:cached
+      - node_modules:/app/node_modules
+    container_name: storybook-regression-test
+
+  storybook:
+    build:
+      context: .
+      dockerfile: DockerfileStorybook
+    ports:
+      - '6006:6006'
+    volumes:
+      - ./:/app:cached
+      - node_modules_sb:/app/node_modules
+    container_name: storybook-regression-test-sb
+
+volumes:
+  node_modules:
+  node_modules_sb:

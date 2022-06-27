@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+COMPOSE_PROJECT_NAME=vrt docker-compose run --rm node yarn lint-staged

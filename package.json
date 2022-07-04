@@ -13,7 +13,7 @@
     "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "build-storybook": "build-storybook",
-    "regression": "reg-suit run",
+    "regression": "yarn storycap && reg-suit run",
     "prepare": "husky install"
   },
   "dependencies": {
